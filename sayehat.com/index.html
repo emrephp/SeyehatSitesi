@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyahat Günlüğüm</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Sayfa yüklenirken parlamayı engelleyen kesin çözüm -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-links"><a href="index.html">🏠 Ana Sayfa</a></div>
+        <button id="theme-toggle" class="theme-btn">🌙 Gece Modu</button>
+    </nav>
+    <main>
+        <header>
+            <h1>🌍 Emre'nin Seyahat Günlüğü</h1>
+            <p>Gezdiğim ülkeler, şehirler ve kendi çektiğim fotoğraflar.</p>
+        </header>
+        <hr>
+        <section class="places">
+            <h2>🌎 Gezdiğim Yerler</h2>
+            <div class="card-container">
+                <!-- 1. KARADAĞ -->
+                <div class="card">
+                    <div class="card-image-wrapper"><img src="images/tivat.jpg" alt="Karadağ" class="card-cover-img"></div>
+                    <div class="card-content">
+                        <h3>Karadağ</h3>
+                        <p>Adriyatik kıyısındaki muhteşem doğası, tarihi Kotor şehri...</p>
+                        <a href="Karadag.html" class="card-btn">Günlüğü Oku →</a>
+                    </div>
+                </div>
+                <!-- 2. İTALYA -->
+                <div class="card">
+                    <div class="card-image-wrapper"><img src="images/italya1.jpg" alt="İtalya" class="card-cover-img"></div>
+                    <div class="card-content">
+                        <h3>İtalya</h3>
+                        <p>Tarihin, sanatın ve pizzanın anavatanı Roma ve Venedik...</p>
+                        <a href="italya.html" class="card-btn">Günlüğü Oku →</a>
+                    </div>
+                </div>
+                <!-- 3. HIRVATİSTAN -->
+                <div class="card">
+                    <div class="card-image-wrapper"><img src="images/hirvatistan1.jpg" alt="Hırvatistan" class="card-cover-img"></div>
+                    <div class="card-content">
+                        <h3>Hırvatistan</h3>
+                        <p>Adriyatik'in incisi Dubrovnik surları ve harika manzaralar...</p>
+                        <a href="hirvatistan.html" class="card-btn">Günlüğü Oku →</a>
+                    </div>
+                </div>
+                <!-- 4. ALMANYA -->
+                <div class="card">
+                    <div class="card-image-wrapper"><img src="images/almanya1.jpg" alt="Almanya" class="card-cover-img"></div>
+                    <div class="card-content">
+                        <h3>Almanya</h3>
+                        <p>Berlin'in tarihi sokakları ve masallardan fırlamış şatolar...</p>
+                        <a href="almanya.html" class="card-btn">Günlüğü Oku →</a>
+                    </div>
+                </div>
+                <!-- 5. BULGARİSTAN -->
+                <div class="card">
+                    <div class="card-image-wrapper"><img src="images/bulgaristan1.jpg" alt="Bulgaristan" class="card-cover-img"></div>
+                    <div class="card-content">
+                        <h3>Bulgaristan</h3>
+                        <p>Tarihi Sofya sokakları ve yeşilliklerle dolu Balkan dağları...</p>
+                        <a href="bulgaristan.html" class="card-btn">Günlüğü Oku →</a>
+                    </div>
+                </div>
+                <!-- 6. SIRBİSTAN -->
+                <div class="card">
+                    <div class="card-image-wrapper"><img src="images/sirbistan2.jpg" alt="Sırbistan" class="card-cover-img"></div>
+                    <div class="card-content">
+                        <h3>Sırbistan</h3>
+                        <p>Belgrad'ın hareketli caddeleri ve muhteşem Tuna manzarası...</p>
+                        <a href="sirbistan.html" class="card-btn">Günlüğü Oku →</a>
+                    </div>
+                </div>
+                <!-- 7. TÜRKİYE -->
+                <div class="card">
+                    <div class="card-image-wrapper"><img src="images/turkiye1.jpg" alt="Türkiye" class="card-cover-img"></div>
+                    <div class="card-content">
+                        <h3>Türkiye</h3>
+                        <p>Eşsiz İstanbul Boğazı, yokuşları ve zengin mutfak...</p>
+                        <a href="turkiye.html" class="card-btn">Günlüğü Oku →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="contact-section">
+            <h2>📬 İletişim</h2>
+            <p>Soru, öneri veya iş birlikleri için aşağıdaki formu doldurarak bana ulaşabilirsiniz:</p>
+            <form class="contact-form" action="mailto:ekarahan2003@gmail.com" method="post" enctype="text/plain">
+                <div class="form-row">
+                    <input type="text" name="Ad" placeholder="Adınız" required>
+                    <input type="text" name="Soyad" placeholder="Soyadınız" required>
+                </div>
+                <input type="email" name="Eposta" placeholder="Gmail / E-posta Adresiniz" required>
+                <input type="tel" name="Numara" placeholder="Telefon Numaranız" required>
+                <textarea name="Mesaj" rows="4" placeholder="Sorununuz veya Mesajınız" required></textarea>
+                <button type="submit" class="contact-btn">Gönder</button>
+            </form>
+        </section>
+    </main>
+    <footer><p>© 2026 Emre'nin Seyahat Günlüğü. Tüm hakları saklıdır.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

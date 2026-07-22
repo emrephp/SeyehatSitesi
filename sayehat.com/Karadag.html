@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karadağ Gezi Günlüğüm</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.classList.add('dark-mode'); }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-links"><a href="index.html">🏠 Ana Sayfa</a></div>
+        <button id="theme-toggle" class="theme-btn">🌙 Gece Modu</button>
+    </nav>
+    <main>
+        <header>
+            <h1>🇲🇪 Karadağ Seyahat Anılarım</h1>
+            <p>Adriyatik kıyısındaki muhteşem doğası ve koyları...</p>
+        </header>
+        <hr>
+        <section class="country-detail">
+            <h2>📍 Nereleri Gezdim?</h2>
+            <p>Kotor Körfezi'ni ve Tivat'ın modern sahil şeridini gezdim.</p>
+            <h3>📸 Gezimden Kareler</h3>
+            <div class="photo-container"><img src="images/tivat.jpg" alt="Karadağ 1" class="travel-img"><p class="img-caption">Balkondan dağ ve deniz manzarası</p></div>
+            <div class="photo-container"><img src="images/tivat1.jpg" alt="Karadağ 2" class="travel-img"><p class="img-caption">Körfez boyunca yürüyüş yolu</p></div>
+            <div class="photo-container"><img src="images/tivat2.jpg" alt="Karadağ 3" class="travel-img"><p class="img-caption">Cam gibi berrak sular</p></div>
+            <div class="photo-container"><img src="images/tivat3.jpg" alt="Karadağ 4" class="travel-img"><p class="img-caption">Tarihi kasabalar</p></div>
+        </section>
+        <div style="margin-top:30px;text-align:center;"><a href="index.html" class="card-btn" style="display:inline-block;padding:10px 20px;">← Ana Sayfaya Dön</a></div>
+    </main>
+    <footer><p>© 2026 Emre'nin Seyahat Günlüğü. Tüm hakları saklıdır.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
