@@ -1,2 +1,0 @@
-# SeyehatSitesi
-php öğrencem
