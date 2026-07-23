@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almanya Gezi Günlüğüm</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.classList.add('dark-mode'); }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-links"><a href="index.html">🏠 Ana Sayfa</a></div>
+        <button id="theme-toggle" class="theme-btn">🌙 Gece Modu</button>
+    </nav>
+    <main>
+        <header>
+            <h1>🇩🇪 Almanya Seyahat Anılarım</h1>
+            <p>Tarihin, düzenin ve muhteşem şatoların ülkesi.</p>
+        </header>
+        <hr>
+        <section class="country-detail">
+            <h2>📍 Nereleri Gezdim?</h2>
+            <p>Berlin ve Köln gibi tarihi şehirleri gezdim.</p>
+            <h3>📸 Gezimden Kareler</h3>
+            <div class="photo-container"><img src="images/almanya1.jpg" alt="Almanya 1" class="travel-img"><p class="img-caption">Tarihi Alman parlamentosu</p></div>
+            <div class="photo-container"><img src="images/almanya2.jpg" alt="Almanya 2" class="travel-img"><p class="img-caption">Heybetli Köln Katedrali</p></div>
+        </section>
+        <div style="margin-top:30px;text-align:center;"><a href="index.html" class="card-btn" style="display:inline-block;padding:10px 20px;">← Ana Sayfaya Dön</a></div>
+    </main>
+    <footer><p>© 2026 Emre'nin Seyahat Günlüğü. Tüm hakları saklıdır.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
