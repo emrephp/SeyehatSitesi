@@ -3,7 +3,7 @@
 
 # Loglar
 *.log
-
+*.env
 # İşletim sistemi dosyaları
 .DS_Store
 Thumbs.db
