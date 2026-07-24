@@ -1,5 +1,10 @@
 FROM php:8.3-apache
 
+# PHP curl eklentisini yükle (Formspree'ye forward için)
+RUN apt-get update && apt-get install -y libcurl4-openssl-dev && \
+    docker-php-ext-install curl && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # Apache mod_rewrite aktifleştir (ileride SaaS için URL routing gerekecek)
 RUN a2enmod rewrite
 

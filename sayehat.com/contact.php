@@ -76,6 +76,30 @@ if ($written === false) {
     exit;
 }
 
+// ── Formspree'ye de gönder ──
+$formspreeUrl = 'https://formspree.io/f/xpqvyanp';
+$formData = [
+    'Ad'     => $ad,
+    'Soyad'  => $soyad,
+    'Eposta' => $eposta,
+    'Numara' => $numara,
+    'Mesaj'  => $mesaj,
+];
+
+$ch = curl_init($formspreeUrl);
+curl_setopt_array($ch, [
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => json_encode($formData),
+    CURLOPT_HTTPHEADER     => [
+        'Content-Type: application/json',
+        'Accept: application/json',
+    ],
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT        => 10,
+]);
+curl_exec($ch);
+curl_close($ch);
+
 // Başarılı yanıt
 http_response_code(200);
 echo json_encode(['success' => true, 'message' => 'Mesajınız başarıyla gönderildi!']);
