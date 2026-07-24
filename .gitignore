@@ -1,0 +1,9 @@
+# PhpStorm IDE
+.idea/
+
+# Loglar
+*.log
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
