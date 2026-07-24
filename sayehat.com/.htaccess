@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# HTTPS yönlendirmesi (Render proxy arkasında)
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Mevcut dosya veya klasöre doğrudan eriş
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 404 sayfası
+ErrorDocument 404 /404.html

@@ -1,6 +1,10 @@
 services:
-  - type: static_site
+  - type: web
     name: seyehat-sitesi
+    runtime: docker
     branch: main
-    staticPublishPath: ./sayehat.com
+    dockerfilePath: ./Dockerfile
     autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 10000

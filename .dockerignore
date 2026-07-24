@@ -1,0 +1,9 @@
+.git
+.idea
+.gitignore
+.dockerignore
+README.md
+LICENSE
+*.log
+.DS_Store
+Thumbs.db
