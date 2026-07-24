@@ -98,7 +98,7 @@
         <section class="contact-section">
             <h2>📬 İletişim</h2>
             <p>Soru, öneri veya iş birlikleri için aşağıdaki formu doldurarak bana ulaşabilirsiniz:</p>
-            <form class="contact-form" action="https://formspree.io/f/xpqvyanp" method="POST">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xpqvyanp" method="POST">
                 <div class="form-row">
                     <input type="text" name="Ad" placeholder="Adınız" required>
                     <input type="text" name="Soyad" placeholder="Soyadınız" required>
@@ -106,7 +106,10 @@
                 <input type="email" name="Eposta" placeholder="Gmail / E-posta Adresiniz" required>
                 <input type="tel" name="Numara" placeholder="Telefon Numaranız" required>
                 <textarea name="Mesaj" rows="4" placeholder="Sorununuz veya Mesajınız" required></textarea>
+                <!-- Bot koruması: gerçek kullanıcılar bu alanı görmez, doldurmaz -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                 <button type="submit" class="contact-btn">Gönder</button>
+                <p id="form-status" class="form-status" hidden></p>
             </form>
         </section>
     </main>
