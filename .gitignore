@@ -7,3 +7,6 @@
 # İşletim sistemi dosyaları
 .DS_Store
 Thumbs.db
+
+# Kullanıcı verileri (mesajlar)
+sayehat.com/data/

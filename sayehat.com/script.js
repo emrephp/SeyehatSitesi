@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     headers: { 'Accept': 'application/json' }
                 });
 
-                if (response.ok) {
+                const data = await response.json().catch(() => ({}));
+
+                if (response.ok && data.success) {
                     formStatus.classList.add('success');
                     formStatus.textContent = '✅ Mesajınız başarıyla gönderildi! En kısa sürede e-posta adresinize yanıt verilecektir.';
                     contactForm.reset();
                 } else {
-                    const data = await response.json().catch(() => ({}));
-                    const msg = (data && data.errors && data.errors.map(err => err.message).join(', '))
-                        || 'Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.';
+                    const msg = data.message || 'Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.';
                     formStatus.classList.add('error');
                     formStatus.textContent = '❌ ' + msg;
                 }
